@@ -1,206 +1,206 @@
 # Eye & Water Reminder App
 
-**Ung dung nhac nho cham soc mat va uong nuoc** - Developed by **Pham Le Ngoc Son**
+**Ứng dụng nhắc nhở chăm sóc mắt và uống nước** - Phát triển bởi **Phạm Lê Ngọc Sơn**
 
 ---
 
-## Gioi thieu
+## Giới thiệu
 
-**Eye & Water Reminder** la ung dung Android duoc phat trien boi **Pham Le Ngoc Son**, giup nguoi dung bao ve suc khoe mat va duy tri thoi quen uong nuoc deu dan hang ngay.
+**Eye & Water Reminder** là ứng dụng Android được phát triển bởi **Phạm Lê Ngọc Sơn**, giúp người dùng bảo vệ sức khỏe mắt và duy trì thói quen uống nước đều đặn hàng ngày.
 
-Trong thoi dai so, viec ngoi truoc man hinh may tinh va dien thoai qua lau co the gay hai cho mat va khien co the thieu nuoc. Ung dung nay se tu dong nhac nho ban:
+Trong thời đại số, việc ngồi trước màn hình máy tính và điện thoại quá lâu có thể gây hại cho mắt và khiến cơ thể thiếu nước. Ứng dụng này sẽ tự động nhắc nhở bạn:
 
-- Nghi ngoi mat dinh ky de giam cang thang thi giac (Digital Eye Strain)
-- Uong nuoc deu dan de dam bao co the luon du nuoc
-
----
-
-## Tinh nang chinh
-
-- **Nhac nho cham soc mat**: Dat lich nhac nghi mat theo tan suat tuy chinh
-- **Nhac nho uong nuoc**: Thiet lap nhac nho uong nuoc trong ngay
-- **Tuy chinh linh hoat**:
-  - Mot lan duy nhat
-  - Hang ngay
-  - Hang gio (dung gio)
-  - Moi X phut (toi thieu 15 phut)
-  - Chon ngay cu the trong tuan
-- **Tieu de nhac nho tuy chinh**: Tu dat ten cho tung nhac nho
-- **Chon ngay va gio bat dau**: Giao dien chon thoi gian truc quan
-- **Bat/Tat nhac nho**: De dang quan ly trang thai nhac nho
-- **Goi y va phan hoi**: Gui goi y cai thien ung dung truc tiep tu trong app
-- **Giao dien Material Design 3**: Hien dai, than thien voi nguoi dung
-- **Splash Screen**: Man hinh khoi dong voi hieu ung loading
-- **Thong bao thong minh**: Xu ly quyen thong bao cho Android 13+
-- **Tiet kiem pin**: Su dung WorkManager de lap lich nen hieu qua
+- Nghỉ ngơi mắt định kỳ để giảm căng thẳng thị giác (Digital Eye Strain)
+- Uống nước đều đặn để đảm bảo cơ thể luôn đủ nước
 
 ---
 
-## Cong nghe su dung
+## Tính năng chính
 
-| Thanh phan | Cong nghe |
+- **Nhắc nhở chăm sóc mắt**: Đặt lịch nhắc nghỉ mắt theo tần suất tuỳ chỉnh
+- **Nhắc nhở uống nước**: Thiết lập nhắc nhở uống nước trong ngày
+- **Tuỳ chỉnh linh hoạt**:
+  - Một lần duy nhất
+  - Hàng ngày
+  - Hàng giờ (đúng giờ)
+  - Mỗi X phút (tối thiểu 15 phút)
+  - Chọn ngày cụ thể trong tuần
+- **Tiêu đề nhắc nhở tuỳ chỉnh**: Tự đặt tên cho từng nhắc nhở
+- **Chọn ngày và giờ bắt đầu**: Giao diện chọn thời gian trực quan
+- **Bật/Tắt nhắc nhở**: Dễ dàng quản lý trạng thái nhắc nhở
+- **Gợi ý và phản hồi**: Gửi gợi ý cải thiện ứng dụng trực tiếp từ trong app
+- **Giao diện Material Design 3**: Hiện đại, thân thiện với người dùng
+- **Splash Screen**: Màn hình khởi động với hiệu ứng loading
+- **Thông báo thông minh**: Xử lý quyền thông báo cho Android 13+
+- **Tiết kiệm pin**: Sử dụng WorkManager để lập lịch nền hiệu quả
+
+---
+
+## Công nghệ sử dụng
+
+| Thành phần | Công nghệ |
 |---|---|
-| **Ngon ngu** | Kotlin |
-| **Kien truc** | MVVM (Model-View-ViewModel) + Clean Architecture |
-| **Giao dien** | Jetpack Compose |
-| **Luu tru cuc bo** | Room Database |
+| **Ngôn ngữ** | Kotlin |
+| **Kiến trúc** | MVVM (Model-View-ViewModel) + Clean Architecture |
+| **Giao diện** | Jetpack Compose |
+| **Lưu trữ cục bộ** | Room Database |
 | **Dependency Injection** | Hilt (Dagger) |
-| **Xu ly bat dong bo** | Kotlin Coroutines & Flow |
-| **Tac vu nen** | WorkManager |
-| **Backend** | Firebase Firestore (luu tru goi y nguoi dung) |
-| **Kiem tra chat luong** | Detekt (phan tich tinh), ktlint |
-| **Kiem thu** | JUnit, Mockito, MockK, Turbine, Truth |
-| **Do phu test** | JaCoCo |
+| **Xử lý bất đồng bộ** | Kotlin Coroutines & Flow |
+| **Tác vụ nền** | WorkManager |
+| **Backend** | Firebase Firestore (lưu trữ gợi ý người dùng) |
+| **Kiểm tra chất lượng** | Detekt (phân tích tĩnh), ktlint |
+| **Kiểm thử** | JUnit, Mockito, MockK, Turbine, Truth |
+| **Độ phủ test** | JaCoCo |
 | **CI/CD** | GitHub Actions |
 
 ---
 
-## Kien truc du an
+## Kiến trúc dự án
 
-Ung dung duoc xay dung theo mo hinh **Clean Architecture** voi su tach biet ro rang giua cac tang:
+Ứng dụng được xây dựng theo mô hình **Clean Architecture** với sự tách biệt rõ ràng giữa các tầng:
 
 ```
 com.alpha.myeyecare/
-|
-|-- common/                          # Tien ich va hang so dung chung
-|   |-- constants/
-|   |   |-- AppDestinations.kt       # Dinh nghia cac diem den Navigation
-|   |   +-- ReminderTypes.kt         # Dinh nghia loai nhac nho
-|   +-- utils/
-|       |-- ExtensionFunctions.kt    # Ham mo rong tien ich
-|       +-- UtilFunctions.kt         # Ham tien ich chung
-|
-|-- data/                            # Tang du lieu (Data Layer)
-|   |-- local/                       # Luu tru cuc bo
-|   |   |-- converters/
-|   |   |   +-- Converters.kt        # Chuyen doi kieu du lieu cho Room
-|   |   |-- dao/
-|   |   |   +-- ReminderDao.kt       # Data Access Object
-|   |   |-- entities/
-|   |   |   +-- Reminder.kt          # Entity cua Room Database
-|   |   +-- ReminderDatabase.kt      # Cau hinh Room Database
-|   +-- repository/                  # Hien thuc Repository
-|       |-- ReminderRepositoryImpl.kt
-|       +-- SuggestionRepositoryImpl.kt
-|
-|-- di/                              # Dependency Injection
-|   |-- AppModule.kt                 # Module chinh cua ung dung
-|   |-- DatabaseModule.kt            # Module cau hinh Database
-|   +-- RemoteModule.kt              # Module cau hinh Firebase
-|
-|-- domain/                          # Tang logic nghiep vu (Domain Layer)
-|   |-- model/                       # Cac model du lieu
-|   |   |-- DayOfWeek.kt
-|   |   |-- ReminderDetails.kt
-|   |   |-- ReminderFrequency.kt
-|   |   +-- Suggestion.kt
-|   |-- repository/                  # Giao dien Repository (abstraction)
-|   |   |-- ReminderRepository.kt
-|   |   +-- SuggestionRepository.kt
-|   +-- useCases/                    # Cac Use Case
-|       |-- CheckReminderStatusUseCase.kt
-|       |-- GetReminderDetailsUserCase.kt
-|       |-- SaveReminderUseCase.kt
-|       +-- SaveSuggestionsUseCase.kt
-|
-|-- presentation/                    # Tang giao dien (Presentation Layer)
-|   |-- navigation/
-|   |   +-- NavGraph.kt              # Dinh nghia Navigation Graph
-|   +-- ui/
-|       |-- common/
-|       |   +-- CommonUI.kt          # Cac thanh phan UI dung chung
-|       |-- detailScreen/
-|       |   |-- SetupReminderScreen.kt    # Man hinh cai dat nhac nho
-|       |   +-- SetupReminderViewModel.kt
-|       |-- home/
-|       |   +-- HomeScreen.kt        # Man hinh chinh
-|       |-- splash/
-|       |   |-- SplashScreen.kt      # Man hinh khoi dong
-|       |   +-- SplashViewModel.kt
-|       |-- suggestion/
-|       |   |-- SuggestionSubmissionViewModel.kt
-|       |   +-- UserSuggestionScreen.kt   # Man hinh gui goi y
-|       +-- theme/
-|           |-- Color.kt             # Dinh nghia mau sac
-|           |-- Theme.kt             # Dinh nghia theme
-|           +-- Type.kt              # Dinh nghia kieu chu
-|
-|-- worker/                          # Xu ly tac vu nen
-|   |-- ReminderScheduler.kt         # Lap lich nhac nho
-|   +-- ReminderWorker.kt            # Worker thuc thi nhac nho
-|
-|-- MainActivity.kt                  # Activity chinh
-+-- MyApplication.kt                 # Application class (Hilt entry point)
+│
+├── common/                          # Tiện ích và hằng số dùng chung
+│   ├── constants/
+│   │   ├── AppDestinations.kt       # Định nghĩa các điểm đến Navigation
+│   │   └── ReminderTypes.kt         # Định nghĩa loại nhắc nhở
+│   └── utils/
+│       ├── ExtensionFunctions.kt    # Hàm mở rộng tiện ích
+│       └── UtilFunctions.kt         # Hàm tiện ích chung
+│
+├── data/                            # Tầng dữ liệu (Data Layer)
+│   ├── local/                       # Lưu trữ cục bộ
+│   │   ├── converters/
+│   │   │   └── Converters.kt        # Chuyển đổi kiểu dữ liệu cho Room
+│   │   ├── dao/
+│   │   │   └── ReminderDao.kt       # Data Access Object
+│   │   ├── entities/
+│   │   │   └── Reminder.kt          # Entity của Room Database
+│   │   └── ReminderDatabase.kt      # Cấu hình Room Database
+│   └── repository/                  # Hiện thực Repository
+│       ├── ReminderRepositoryImpl.kt
+│       └── SuggestionRepositoryImpl.kt
+│
+├── di/                              # Dependency Injection
+│   ├── AppModule.kt                 # Module chính của ứng dụng
+│   ├── DatabaseModule.kt            # Module cấu hình Database
+│   └── RemoteModule.kt              # Module cấu hình Firebase
+│
+├── domain/                          # Tầng logic nghiệp vụ (Domain Layer)
+│   ├── model/                       # Các model dữ liệu
+│   │   ├── DayOfWeek.kt
+│   │   ├── ReminderDetails.kt
+│   │   ├── ReminderFrequency.kt
+│   │   └── Suggestion.kt
+│   ├── repository/                  # Giao diện Repository (abstraction)
+│   │   ├── ReminderRepository.kt
+│   │   └── SuggestionRepository.kt
+│   └── useCases/                    # Các Use Case
+│       ├── CheckReminderStatusUseCase.kt
+│       ├── GetReminderDetailsUserCase.kt
+│       ├── SaveReminderUseCase.kt
+│       └── SaveSuggestionsUseCase.kt
+│
+├── presentation/                    # Tầng giao diện (Presentation Layer)
+│   ├── navigation/
+│   │   └── NavGraph.kt              # Định nghĩa Navigation Graph
+│   └── ui/
+│       ├── common/
+│       │   └── CommonUI.kt          # Các thành phần UI dùng chung
+│       ├── detailScreen/
+│       │   ├── SetupReminderScreen.kt    # Màn hình cài đặt nhắc nhở
+│       │   └── SetupReminderViewModel.kt
+│       ├── home/
+│       │   └── HomeScreen.kt        # Màn hình chính
+│       ├── splash/
+│       │   ├── SplashScreen.kt      # Màn hình khởi động
+│       │   └── SplashViewModel.kt
+│       ├── suggestion/
+│       │   ├── SuggestionSubmissionViewModel.kt
+│       │   └── UserSuggestionScreen.kt   # Màn hình gửi gợi ý
+│       └── theme/
+│           ├── Color.kt             # Định nghĩa màu sắc
+│           ├── Theme.kt             # Định nghĩa theme
+│           └── Type.kt              # Định nghĩa kiểu chữ
+│
+├── worker/                          # Xử lý tác vụ nền
+│   ├── ReminderScheduler.kt         # Lập lịch nhắc nhở
+│   └── ReminderWorker.kt            # Worker thực thi nhắc nhở
+│
+├── MainActivity.kt                  # Activity chính
+└── MyApplication.kt                 # Application class (Hilt entry point)
 ```
 
 ---
 
-## Anh chup man hinh
+## Ảnh chụp màn hình
 
-| Man hinh chinh | Cai dat nhac nho | Goi y |
+| Màn hình chính | Cài đặt nhắc nhở | Gợi ý |
 |---|---|---|
 | <img src="screenshots/Home-Screen.png" height="400"/> | <img src="screenshots/Set-Reminder-Screen.png" height="400"/> | <img src="screenshots/Suggestions-Screen.png" height="400"/> |
 
-**Mo ta cac man hinh:**
+**Mô tả các màn hình:**
 
-1. **Splash Screen**: Man hinh khoi dong voi logo ung dung va thanh tien trinh loading
-2. **Home Screen**: Man hinh chinh hien thi 2 tuy chon - Nhac nho mat va Nhac nho uong nuoc
-3. **Setup Reminder Screen**: Man hinh cai dat chi tiet cho nhac nho (tan suat, ngay gio, tieu de...)
-4. **Suggestion Screen**: Man hinh gui phan hoi va goi y cai thien ung dung
+1. **Splash Screen**: Màn hình khởi động với logo ứng dụng và thanh tiến trình loading
+2. **Home Screen**: Màn hình chính hiển thị 2 tuỳ chọn - Nhắc nhở mắt và Nhắc nhở uống nước
+3. **Setup Reminder Screen**: Màn hình cài đặt chi tiết cho nhắc nhở (tần suất, ngày giờ, tiêu đề...)
+4. **Suggestion Screen**: Màn hình gửi phản hồi và gợi ý cải thiện ứng dụng
 
 ---
 
-## Quy trinh CI/CD
+## Quy trình CI/CD
 
-Du an tich hop **GitHub Actions** de dam bao chat luong code:
+Dự án tích hợp **GitHub Actions** để đảm bảo chất lượng code:
 
-| Buoc | Mo ta |
+| Bước | Mô tả |
 |---|---|
-| **Debug Build Check** | Kiem tra code co bien dich thanh cong hay khong |
-| **Detekt Check** | Phan tich tinh code Kotlin, dam bao code sach va de bao tri |
-| **Unit Tests** | Chay unit test va kiem tra do phu code (yeu cau >= 80%) |
+| **Debug Build Check** | Kiểm tra code có biên dịch thành công hay không |
+| **Detekt Check** | Phân tích tĩnh code Kotlin, đảm bảo code sạch và dễ bảo trì |
+| **Unit Tests** | Chạy unit test và kiểm tra độ phủ code (yêu cầu >= 80%) |
 
-Quy trinh nay tu dong chay khi co **Pull Request** hoac **push** vao nhanh `main`.
+Quy trình này tự động chạy khi có **Pull Request** hoặc **push** vào nhánh `main`.
 
 ---
 
-## Yeu cau he thong
+## Yêu cầu hệ thống
 
-- **Android**: API 24 (Android 7.0 Nougat) tro len
+- **Android**: API 24 (Android 7.0 Nougat) trở lên
 - **Target SDK**: 35 (Android 15)
-- **JDK**: 17 (de build du an)
+- **JDK**: 17 (để build dự án)
 - **Gradle**: 8.x (Kotlin DSL)
 
 ---
 
-## Huong dan cai dat va chay du an
+## Hướng dẫn cài đặt và chạy dự án
 
-### Buoc 1: Clone repository
+### Bước 1: Clone repository
 
 ```bash
 git clone https://github.com/phamlengocson/Eye-Water-Reminder-App.git
 cd Eye-Water-Reminder-App
 ```
 
-### Buoc 2: Mo du an
+### Bước 2: Mở dự án
 
-Mo du an bang **Android Studio** (phien ban moi nhat duoc khuyen nghi).
+Mở dự án bằng **Android Studio** (phiên bản mới nhất được khuyến nghị).
 
-### Buoc 3: Dong bo Gradle
+### Bước 3: Đồng bộ Gradle
 
-Android Studio se tu dong dong bo cac dependency. Neu khong, chon **File > Sync Project with Gradle Files**.
+Android Studio sẽ tự động đồng bộ các dependency. Nếu không, chọn **File > Sync Project with Gradle Files**.
 
-### Buoc 4: Cau hinh Firebase
+### Bước 4: Cấu hình Firebase
 
-Du an su dung Firebase Firestore cho tinh nang goi y. Ban can:
-1. Tao du an tren [Firebase Console](https://console.firebase.google.com/)
-2. Tai file `google-services.json` va dat vao thu muc `app/`
-3. Bat Firestore Database trong Firebase Console
+Dự án sử dụng Firebase Firestore cho tính năng gợi ý. Bạn cần:
+1. Tạo dự án trên [Firebase Console](https://console.firebase.google.com/)
+2. Tải file `google-services.json` và đặt vào thư mục `app/`
+3. Bật Firestore Database trong Firebase Console
 
-### Buoc 5: Build va chay
+### Bước 5: Build và chạy
 
-- Chon thiet bi/emulator Android (API >= 24)
-- Nhan **Run** hoac su dung lenh:
+- Chọn thiết bị/emulator Android (API >= 24)
+- Nhấn **Run** hoặc sử dụng lệnh:
 
 ```bash
 ./gradlew assembleDebug
@@ -208,23 +208,23 @@ Du an su dung Firebase Firestore cho tinh nang goi y. Ban can:
 
 ---
 
-## Kiem thu
+## Kiểm thử
 
-### Chay unit tests
+### Chạy unit tests
 
 ```bash
 ./gradlew testDebugUnitTest
 ```
 
-### Tao bao cao do phu code (JaCoCo)
+### Tạo báo cáo độ phủ code (JaCoCo)
 
 ```bash
 ./gradlew clean testDebugUnitTest jacocoTestReport
 ```
 
-Bao cao se duoc tao tai: `app/build/reports/jacoco/jacocoTestReport/`
+Báo cáo sẽ được tạo tại: `app/build/reports/jacoco/jacocoTestReport/`
 
-### Chay kiem tra Detekt
+### Chạy kiểm tra Detekt
 
 ```bash
 ./gradlew detekt
@@ -232,27 +232,27 @@ Bao cao se duoc tao tai: `app/build/reports/jacoco/jacocoTestReport/`
 
 ---
 
-## Thong tin phien ban
+## Thông tin phiên bản
 
-| Phien ban | Ma phien ban | Ngay phat hanh |
+| Phiên bản | Mã phiên bản | Ngày phát hành |
 |---|---|---|
 | 1.1.0 | 2 | 27/08/2025 |
 | 1.0.0 | 1 | 19/08/2025 |
 
 ---
 
-## Tac gia
+## Tác giả
 
-**Pham Le Ngoc Son**
+**Phạm Lê Ngọc Sơn**
 
-- **Vai tro**: Developer & Owner
-- **Du an**: Eye & Water Reminder App
-- **Cong nghe chuyen mon**: Android Development, Kotlin, Jetpack Compose, Clean Architecture
+- **Vai trò**: Developer & Owner
+- **Dự án**: Eye & Water Reminder App
+- **Công nghệ chuyên môn**: Android Development, Kotlin, Jetpack Compose, Clean Architecture
 
 ---
 
-## Giay phep
+## Giấy phép
 
-Du an nay thuoc quyen so huu cua **Pham Le Ngoc Son**. Moi quyen duoc bao luu.
+Dự án này thuộc quyền sở hữu của **Phạm Lê Ngọc Sơn**. Mọi quyền được bảo lưu.
 
-Copyright (c) 2025 Pham Le Ngoc Son. All rights reserved.
+Copyright (c) 2025 Phạm Lê Ngọc Sơn. All rights reserved.
